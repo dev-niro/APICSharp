@@ -44,7 +44,6 @@ namespace Usuarios.API.Controllers
             finded.Name = producto.Name;
             finded.Description = producto.Description;
             finded.Price = producto.Price;
-            finded.InStock = producto.InStock;
         }
 
         // DELETE api/<ProductoController>/5

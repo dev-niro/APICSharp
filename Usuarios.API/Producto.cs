@@ -12,8 +12,5 @@ namespace Usuarios.API
 
 		public string Description { get; set; }
 
-		public Boolean InStock { get; set; }
-
-
 	}
 }

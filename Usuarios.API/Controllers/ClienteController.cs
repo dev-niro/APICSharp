@@ -36,7 +36,6 @@ namespace Usuarios.API.Controllers
         public void Post(Cliente cliente)
         {
             lista.Add(cliente);
-            //return StatusCode(201);
         }
 
         [HttpPut("{id}")]
@@ -46,14 +45,13 @@ namespace Usuarios.API.Controllers
             finded.FirstName = cliente.FirstName;
             finded.LastName = cliente.LastName;
             finded.Email = cliente.Email;
-            //return finded;
+            finded.Address = cliente.Address;
         }
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
             lista.Remove(lista.FirstOrDefault(x => x.Id == id));
-            //return StatusCode(204);
         }
     }
 }
