@@ -44,6 +44,15 @@ namespace Usuarios.API.Controllers
             finded.Name = producto.Name;
             finded.Description = producto.Description;
             finded.Price = producto.Price;
+            finded.Stock = producto.Stock;
+        }
+
+        // PUT api/<ProductoController>/5/reducirstock
+        [HttpPut("{id}/reducirstock")]
+        public void ReduceStock(int id, [FromBody] int units)
+        {
+            Producto finded = lista.FirstOrDefault(x => x.Id == id);
+            finded.Stock -= units;
         }
 
         // DELETE api/<ProductoController>/5
