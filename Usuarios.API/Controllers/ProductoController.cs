@@ -41,7 +41,6 @@ namespace Usuarios.API.Controllers
         public void Put(int id, [FromBody] Producto producto)
         {
             Producto finded = lista.FirstOrDefault(x => x.Id == id);
-            finded.Name = producto.Name;
             finded.Description = producto.Description;
             finded.Price = producto.Price;
             finded.Stock = producto.Stock;
